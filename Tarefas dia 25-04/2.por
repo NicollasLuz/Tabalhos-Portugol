@@ -6,7 +6,7 @@ do espectador (por exemplo, livre, 12 anos, 14 anos, 18 anos).
 programa {
     inteiro id
   funcao inicio() {
-    id()
+    idade()
 
     classificacao()
 
@@ -25,7 +25,7 @@ programa {
       pare
     }
   }
-  funcao id(){
+  funcao idade(){
     escreva("Qual sua idade: ")
     leia(id)      
   }
