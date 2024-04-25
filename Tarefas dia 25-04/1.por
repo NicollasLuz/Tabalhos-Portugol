@@ -1,4 +1,5 @@
-/*Descreva um algoritmo que use a estrutura de "escolha caso" 
+/*
+Descreva um algoritmo que use a estrutura de "escolha caso" 
 para determinar o tipo de operação matemática a ser realizada 
 em dois números (adição, subtração, multiplicação, divisão).
 */
