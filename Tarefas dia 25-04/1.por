@@ -1,32 +1,36 @@
+/*Descreva um algoritmo que use a estrutura de "escolha caso" 
+para determinar o tipo de operaÃ§Ã£o matemÃ¡tica a ser realizada 
+em dois nÃºmeros (adiÃ§Ã£o, subtraÃ§Ã£o, multiplicaÃ§Ã£o, divisÃ£o).
+*/
 programa {
   funcao inicio() {
     inteiro operacao, n1, n2, resul
 
-    escreva("Qual o valor do primeiro número: ")
+    escreva("Qual o valor do primeiro nÃºmero: ")
     leia(n1)
 
-    escreva("Qual o valor do segundo número: ")
+    escreva("Qual o valor do segundo nÃºmero: ")
     leia(n2)
 
-    escreva("Digite o número para operação: \n [1] Para adição\n [2] Para subtração\n [3] Para multiplicação\n [4] Para divisão\n  ")
+    escreva("Digite o nÃºmero para operaÃ§Ã£o: \n [1] Para adiÃ§Ã£o\n [2] Para subtraÃ§Ã£o\n [3] Para multiplicaÃ§Ã£o\n [4] Para divisÃ£o\n  ")
     leia(operacao)
 
     escolha(operacao){
       caso 1: 
         resul = n1 + n2
-        escreva("O resultado da operação é: ", resul)
+        escreva("O resultado da operaÃ§Ã£o Ã©: ", resul)
       pare
       caso 2: 
         resul = n1 - n2
-        escreva("O resultado da operação é: ", resul)
+        escreva("O resultado da operaÃ§Ã£o Ã©: ", resul)
       pare
       caso 3: 
         resul = n1 * n2
-        escreva("O resultado da operação é: ", resul)
+        escreva("O resultado da operaÃ§Ã£o Ã©: ", resul)
       pare
       caso 4: 
         resul = n1 / n2
-        escreva("O resultado da operação é: ", resul)
+        escreva("O resultado da operaÃ§Ã£o Ã©: ", resul)
       pare
     }
   }
