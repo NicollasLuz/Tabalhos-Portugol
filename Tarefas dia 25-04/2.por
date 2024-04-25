@@ -1,31 +1,31 @@
 /*
 Descreva um algoritmo que use a estrutura de "escolha caso" 
-para determinar a classificaÃ§Ã£o de um filme com base na idade 
+para determinar a classificação de um filme com base na idade 
 do espectador (por exemplo, livre, 12 anos, 14 anos, 18 anos).
 */
 programa {
     inteiro id
   funcao inicio() {
-    idade()
+    id()
 
     classificacao()
 
     escolha(id){
       caso 0:
-        escreva("VocÃª pode assistir apenas filmes livres")
+        escreva("Você pode assistir apenas filmes livres")
       pare
       caso 1:
-        escreva("VocÃª pode assistir filmes com classificaÃ§Ã£o de 12 anos e livre")
+        escreva("Você pode assistir filmes com classificação de 12 anos e livre")
       pare
       caso 2:
-        escreva("VocÃª pode assistir filmes com classificaÃ§Ã£o de 14 anos, 12 anos e livre")
+        escreva("Você pode assistir filmes com classificação de 14 anos, 12 anos e livre")
       pare
       caso 3:
-      escreva("VocÃª pode assitir todos os filmes")
+      escreva("Você pode assitir todos os filmes")
       pare
     }
   }
-  funcao idade(){
+  funcao id(){
     escreva("Qual sua idade: ")
     leia(id)      
   }
