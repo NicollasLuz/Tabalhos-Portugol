@@ -1,23 +1,38 @@
 /*
-7 - Escreva um algoritmo que use vetores para armazenar 
-as distâncias percorridas por um atleta em diferentes dias de 
-treinamento e depois calcule a distância total percorrida.
+Escreva um algoritmo que use vetores para armazenar 
+as distâncias percorridas por um atleta em diferentes 
+dias de treinamento e depois calcule a distância total 
+percorrida. 
 */
 programa {
   funcao inicio() {
-    real tamanho
+    real dt_total = 0, i, dias
+    caracter medida
+    logico sabo
 
-    escreva("Qual o tamanho de treinos que você quer registrar: ")
-    leia(tamanho)
+    escreva("Qual foi a quantidade de dias em que você quer registrar: ")
+    leia(dias)
 
-    real distancias[tamanho], total = 0
+    real dt[dias]
 
-    para(real i = 0; i != tamanho; i++){
-      escreva("Qual foi a distancia percorrida no ", i + 1, "° treino: ")
-      leia(distancias[i])
+    escreva("Como você quer registrar milhas ou Km: ")
+    leia(medida)
 
-      total += distancias[i]
+    sabo = (medida == 'm')
+
+    para(i = 0; i < dias; i++){
+    escreva("Qual foi a distancia percorrida no ", i + 1, "° dia de treino: ")
+    leia(dt[i])
+
+    dt_total += dt[i]
     }
-    escreva("A distância total percorrida pelo atleta é de: ", total)
+
+    se(sabo){
+      escreva("A distancia total percorrida em milhas é: ", dt_total)
+      escreva("\nA distancia total percorrida em quilômetros é: ", dt_total / 0.6214)
+    } senao {
+      escreva("A distancia total percorrida em quilômetros é: ", dt_total)
+      escreva("\nA distancia total percorrida em milhas é: ", dt_total * 0.6214)
+    }
   }
 }
