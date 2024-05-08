@@ -11,7 +11,7 @@ programa {
     escreva("Qual a massa do corpo 2, em Kg: ")
     leia(massa_corpa_2)
 
-    escreva("Qual a distância entre os corpos, em metros: ")
+    escreva("Qual a distÃ¢ncia entre os corpos, em metros: ")
     leia(distancia_entre_corpos)
     dt = distancia_entre_corpos
 
@@ -22,39 +22,39 @@ programa {
     limpa()
     aguarde()
 
-    escreva("A fórmula para calcular a questão é: F = G x massa do corpo 1 x massa do corpo 2 / distância entre os dois corpos ao quadrado\n")
+    escreva("A fÃ³rmula para calcular a questÃ£o Ã©: F = G x massa do corpo 1 x massa do corpo 2 / distÃ¢ncia entre os dois corpos ao quadrado\n")
     escreva("Com os dados forneciados a fica asim: F = ", constante_gravitacional, " x ((", massa_corpo_1, " x ", massa_corpa_2, ") / ", distancia_entre_corpos, " ^ 2)\n")
 
     //Incremento 1
-    escreva("\nO passo a passo da questão é: \n")
-    escreva("Escrever a fórmula para ficar mais fácil: ")
-    escreva("F = G x massa do corpo 1 x massa do corpo 2 / distância entre os dois corpos ao quadrado\n\n")
+    escreva("\nO passo a passo da questÃ£o Ã©: \n")
+    escreva("Escrever a fÃ³rmula para ficar mais fÃ¡cil: ")
+    escreva("F = G x massa do corpo 1 x massa do corpo 2 / distÃ¢ncia entre os dois corpos ao quadrado\n\n")
 
-    escreva("Substituir os valores na fórmula: ")
-    escreva("F = ", constante_gravitacional, " x ((", massa_corpo_1, " x ", massa_corpa_2, ") / ", distancia_entre_corpos, "²)\n\n")
+    escreva("Substituir os valores na fÃ³rmula: ")
+    escreva("F = ", constante_gravitacional, " x ((", massa_corpo_1, " x ", massa_corpa_2, ") / ", distancia_entre_corpos, "Â²)\n\n")
 
     //Incremento 2
     distancia_entre_corpos = mat.potencia(distancia_entre_corpos, 2)
-    escreva("O segundo passo é: Transformar os valores, começamos pela distância entre os dois corpos que é potência")
+    escreva("O segundo passo Ã©: Transformar os valores, comeÃ§amos pela distÃ¢ncia entre os dois corpos que Ã© potÃªncia")
     escreva("F = ", constante_gravitacional, " x ((", massa_corpo_1, " x ", massa_corpa_2, ") / ", distancia_entre_corpos, ")\n\n")
 
-    escreva("O terceiro passo é: ELiminar os parênteses: ")
+    escreva("O terceiro passo Ã©: ELiminar os parÃªnteses: ")
     escreva("F = ", constante_gravitacional, " x ", massa_corpo_1 * massa_corpa_2, " / ", distancia_entre_corpos, "\n\n")
 
-    escreva("O quarto passo é: Eliminar os primeiros parêntrses vamos eleinimar o segundo: ")
+    escreva("O quarto passo Ã©: Eliminar os primeiros parÃªntrses vamos eleinimar o segundo: ")
     escreva("F = ", constante_gravitacional, " x ", (massa_corpo_1 * massa_corpa_2) /  distancia_entre_corpos, "\n\n")
 
-    escreva("O ultimo passo é: Multiplicar G pelo resultado descoberto na divisão:")
+    escreva("O ultimo passo Ã©: Multiplicar G pelo resultado descoberto na divisÃ£o:")
     escreva("F = ", constante_gravitacional * (massa_corpo_1 * massa_corpa_2) /  distancia_entre_corpos, "\n\n")
 
     forca_atracao = constante_gravitacional * ((massa_corpo_1 * massa_corpa_2) / distancia_entre_corpos)
 
-    escreva("A força gravitacional entre os dois corpos com massa de : ", massa_corpo_1, " e ", massa_corpa_2, " com distância de ", dt, " tem a força de atração em Newtons de: ", forca_atracao)
+    escreva("A forÃ§a gravitacional entre os dois corpos com massa de : ", massa_corpo_1, " e ", massa_corpa_2, " com distÃ¢ncia de ", dt, " tem a forÃ§a de atraÃ§Ã£o em Newtons de: ", forca_atracao)
 
     //Incremento 3
-    escreva("A soma de todos os números é: ", constante_gravitacional + massa_corpo_1 + massa_corpa_2 + distancia_entre_corpos)
+    escreva("A soma de todos os nÃºmeros Ã©: ", constante_gravitacional + massa_corpo_1 + massa_corpa_2 + distancia_entre_corpos)
 
-    escreva("Me informa seu CPF por favor só pra um negocinho: ")
+    escreva("\nMe informa seu CPF por favor sÃ³ pra um negocinho: ")
     leia(cpf)
   }
 
