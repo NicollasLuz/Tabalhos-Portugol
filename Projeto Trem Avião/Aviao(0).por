@@ -12,7 +12,7 @@ programa {
 	}
 
   funcao menuPrincipal(){
-    escreva("Qual opção você deseja selecionar?\n")
+    escreva("Qual opÃ§Ã£o vocÃª deseja selecionar?\n")
 		escreva(" 1 - Inserir dados\n")
 		escreva(" 2 - Calcular dados\n")
 		escreva(" 3 - Visualizar dados\n")
@@ -22,31 +22,31 @@ programa {
 
    funcao entradaDados() {
     enquanto(continuar != '.'){
-    escreva("Insira o código do aeroporto de origem: ")
+    escreva("Insira o cÃ³digo do aeroporto de origem: ")
     leia(aeroportoOrigem)
-    escreva("Insira o código do aeroporto de destino: ")
+    escreva("Insira o cÃ³digo do aeroporto de destino: ")
     leia(aeroportoDestino)
-    escreva("Insira o fuso horário GMT do aeroporto de origem: ")
+    escreva("Insira o fuso horÃ¡rio GMT do aeroporto de origem: ")
     leia(fusoOrigem)
-    escreva("Insira o fuso horário GMT do aeroporto de destino: ")
+    escreva("Insira o fuso horÃ¡rio GMT do aeroporto de destino: ")
     leia(fusoDestino)
-    escreva("Insira o horário de decolagem em UTC: ")
+    escreva("Insira o horÃ¡rio de decolagem em UTC: ")
     leia(horarioDecolagemUTC)
-    escreva("Insira a velocidade de cruzeiro em nós (kt): ")
+    escreva("Insira a velocidade de cruzeiro em nÃ³s (kt): ")
     leia(velocidadeCruzeiro)
-    escreva("Insira os pontos de referência (nome, coordenadas, distância até o próximo ponto): \n")
+    escreva("Insira os pontos de referÃªncia (nome, coordenadas, distÃ¢ncia atÃ© o prÃ³ximo ponto): \n")
 
     para(inteiro i = 0; i != quantidadeDePontos; i++){
-      escreva("Nome do ponto de referência: ")
+      escreva("Nome do ponto de referÃªncia: ")
       leia(nomePontos[i])
-      escreva("Coordenadas do ponto de referência: ")
+      escreva("Coordenadas do ponto de referÃªncia: ")
       leia(coordenadasPontos[i])
-      escreva("Distância até o próximo ponto: ")
+      escreva("DistÃ¢ncia atÃ© o prÃ³ximo ponto: ")
       leia(distanciaPontos[i])
     }
 
     enquanto(continuar != '.'){
-      escreva("Você deseja continuar <s/n>: ")
+      escreva("VocÃª deseja continuar <s/n>: ")
       leia(continuar)
       se(continuar == 'n'){
         continuar = '.'
