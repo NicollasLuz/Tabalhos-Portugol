@@ -2,9 +2,9 @@ programa {
   inclua biblioteca Util --> ut
   inclua biblioteca Texto --> tx
 
-  inteiro opcao, fusoOrigem, fusoDestino, quantidadeDePontos
-  cadeia aeroportoOrigem, aeroportoDestino
-  real horaDecolagem, minutoDecolagem, velocidadeCruzeiro, distanciaTotal, tempoTotalVoo, horarioChegadaUTC, horarioChegadaLocal
+  inteiro opcao, fusoOrigem = 0, fusoDestino = 0, quantidadeDePontos, horaDecolagem = 0, minutoDecolagem = 0, horarioChegadaUTC, horarioChegadaLocal
+  cadeia aeroportoOrigem = " ", aeroportoDestino = " "
+  real velocidadeCruzeiro, distanciaTotal, tempoTotalVoo
   cadeia nomePontos[100]
   real distanciaPontos[100], coordenadasPontos[100]
 
@@ -63,22 +63,22 @@ programa {
 
   //Função para reaizar a entrada de dados. Onde é obtida todas as informações para fazer os calculos
   funcao entradaDados() {
-    inteiro tamanho
-    caracter digito = ' '
 
     //Todos os dados que pedimos ao usuário
-    faca{
-      escreva("Insira o código do aeroporto de origem: ")
-      leia(aeroportoOrigem)
+    validacaoDeCodigoAeroporto("Insira o código do aeroporto de origem: ", aeroportoOrigem)
 
-      tamanho = tx.numero_caracteres(aeroportoOrigem)
-      digito = tx.obter_caracter(aeroportoOrigem, 0)
-  funcao real calcularETO(real distancia, real velocidade) {
+    validacaoDeCodigoAeroporto("Insira o código do aeroporto de destino: ", aeroportoDestino)
+
+    validacaoFusoHorario("Insira o fuso horário GMT do aeroporto de origem: ", fusoOrigem)
+
+    validacaoFusoHorario("Insira o fuso horário GMT do aeroporto de destino: ", fusoDestino)
+
     retorne distancia / velocidade
   }
 
   /*FunçÕ para poder usar horas e minutos para fazer os calculos*/
   funcao inteiro paraMinutos(inteiro horas, inteiro minutos) {
+
     //Transforma as horas em minutos e retorna a soma dos dois para usar uma medida só
     retorne (horas * 60) + minutos
   }
