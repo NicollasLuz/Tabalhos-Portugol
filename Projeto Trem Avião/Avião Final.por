@@ -1,6 +1,6 @@
 programa {	
   inclua biblioteca Util --> ut
-  inclua biblioteca Graficos --> g
+  inclua biblioteca Texto --> tx
 
   inteiro opcao, fusoOrigem, fusoDestino, quantidadeDePontos
   cadeia aeroportoOrigem, aeroportoDestino
@@ -63,16 +63,44 @@ programa {
 
   //Função para reaizar a entrada de dados. Onde é obtida todas as informações para fazer os calculos
   funcao entradaDados() {
+    inteiro tamanho
+    caracter digito = ' '
 
     //Todos os dados que pedimos ao usuário
-    escreva("Insira o código do aeroporto de origem: ")
-    leia(aeroportoOrigem)
-    escreva("Insira o código do aeroporto de destino: ")
-    leia(aeroportoDestino)
-    escreva("Insira o fuso horário GMT do aeroporto de origem: ")
-    leia(fusoOrigem)
-    escreva("Insira o fuso horário GMT do aeroporto de destino: ")
-    leia(fusoDestino)
+    faca{
+      escreva("Insira o código do aeroporto de origem: ")
+      leia(aeroportoOrigem)
+
+      tamanho = tx.numero_caracteres(aeroportoOrigem)
+      digito = tx.obter_caracter(aeroportoOrigem, 0)
+  funcao real calcularETO(real distancia, real velocidade) {
+    retorne distancia / velocidade
+  }
+
+  /*FunçÕ para poder usar horas e minutos para fazer os calculos*/
+  funcao inteiro paraMinutos(inteiro horas, inteiro minutos) {
+    //Transforma as horas em minutos e retorna a soma dos dois para usar uma medida só
+    retorne (horas * 60) + minutos
+  }
+
+  funcao cadeia formatarHoraMinutos(inteiro minutosTotais) {
+
+    // Calcula a quantidade de horas inteiras
+    inteiro horas = minutosTotais / 60
+
+    // Calcula os minutos restantes após dividir pelos 60 minutos de uma hora
+    inteiro minutos = minutosTotais % 60
+
+    //Inicializa a variavel para armazenar o valor obtido
+    cadeia resultado = ""
+
+    // Verifica se a quantidade de horas é menor que 10
+    se (horas < 10) {
+    // Se for, adiciona um zero à esquerda para manter o formato HH
+      resultado = resultado + "0" + horas
+    } senao {
+    //Senão ele apenas transforma para cadeia
+      resultado = resultado + horas
     }
 
     // Adiciona um separador de dois pontos ":" após as horas
@@ -122,16 +150,7 @@ programa {
 
   //Função para exibir todos os dados calculados
   funcao vizualizarDados(){
-tela()
-		linha(100, 700, 100, 0)
-		linha(200, 700, 200, 0)
-		linha(650, 30, 0, 30)
-		texto(10, 10, "Vasco da gama")
-		texto(120, 10, "Real Madrid")
-		texto(220, 10, "Champions")
 
-		g.renderizar()
-		ut.aguarde(10000)
     //Exibe o tempo de voo em cada trecho 
     escreva("Tempo de voo de cada trecho: \n")
 
@@ -179,27 +198,8 @@ tela()
   alguma tecla para continuar um determinado processo
   */
   funcao continuar(){
-  	
     cadeia enter
     escreva("Pressione ENTER para continuar ...\n") 
     leia(enter)  
   }
-  funcao tela(){
-	g.iniciar_modo_grafico(verdadeiro)
-	g.definir_dimensoes_janela(650, 700)
-	g.definir_titulo_janela("Ficha de Navageção")
-	g.definir_cor(g.COR_AZUL)
-	g.limpar()
-  }
-
-  funcao linha(inteiro a, inteiro b, inteiro c, inteiro d){
-  	g.definir_cor(g.COR_BRANCO)
-	g.desenhar_linha(a, b, c, d)	
-  }
-
-  funcao texto(inteiro a, inteiro b, cadeia c){
-	g.definir_cor(g.COR_BRANCO)
-	g.desenhar_texto(a, b, c)
-  }
-  
 }
