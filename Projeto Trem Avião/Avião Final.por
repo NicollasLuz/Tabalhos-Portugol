@@ -31,8 +31,6 @@ programa {
 
       //Caso ela escolha 1 ela vai para a inserção de dados
       caso 1: 
-        escreva("Qual a quantidade de pontos de referência que você quer inserir: ")
-        leia(quantidadeDePontos)
         entradaDados()
         menuPrincipal()
       pare
@@ -73,23 +71,25 @@ programa {
     escreva("Insira o fuso horário GMT do aeroporto de origem: ")
     leia(fusoOrigem)
     escreva("Insira o fuso horário GMT do aeroporto de destino: ")
+    leia(fusoDestino)
+    escreva("Insira a hora de decolagem (em UTC): ")
   funcao real calcularETO(real distancia, real velocidade) {
     retorne distancia / velocidade
   }
 
   /*FunçÕ para poder usar horas e minutos para fazer os calculos*/
-  funcao inteiro paraMinutos(real horas, real minutos) {
+  funcao inteiro paraMinutos(inteiro horas, inteiro minutos) {
     //Transforma as horas em minutos e retorna a soma dos dois para usar uma medida só
     retorne (horas * 60) + minutos
   }
 
-  funcao cadeia formatarHoraMinutos(real minutosTotais) {
+  funcao cadeia formatarHoraMinutos(inteiro minutosTotais) {
 
     // Calcula a quantidade de horas inteiras
     inteiro horas = minutosTotais / 60
 
     // Calcula os minutos restantes após dividir pelos 60 minutos de uma hora
-    inteiro minutos = minutosTotais % 60.0
+    inteiro minutos = minutosTotais % 60
 
     //Inicializa a variavel para armazenar o valor obtido
     cadeia resultado = ""
@@ -178,7 +178,7 @@ programa {
 
   //função que exibe o finalizando código como se estivesse carregando
   funcao finalizarPrograma(){
-    para(inteiro j = 0; j < 3; j++){
+    para(inteiro j = 0; j < 2; j++){
       escreva("Finalizando programa\n")
       limpa()
       escreva("Finalizando programa.\n")
