@@ -1,4 +1,6 @@
 programa {	
+  inclua biblioteca Util --> ut
+
   inteiro opcao, fusoOrigem, fusoDestino, quantidadeDePontos
   cadeia aeroportoOrigem, aeroportoDestino
   real horarioDecolagemUTC, velocidadeCruzeiro
@@ -24,6 +26,13 @@ programa {
         
         caso 2: 
           calculos()
+
+        caso 3: 
+          alterarDados()
+
+        caso 4: 
+          finalizarPrograma()
+
       }
   }
 
@@ -74,10 +83,26 @@ programa {
   }
 
   funcao calculos(){
-
+    
   }
 
   funcao alterarDados(){
-    
+
+  }
+
+  funcao finalizarPrograma(){
+    para(inteiro j = 0; j != 4; j++){
+      escreva("Finalizando programa\n")
+      limpa()
+      escreva("Finalizando programa.\n")
+      ut.aguarde(500)
+      limpa()
+      escreva("Finalizando programa..\n")
+      ut.aguarde(500)
+      limpa()
+      escreva("Finalizando programa...\n")
+      ut.aguarde(500)
+      limpa()
+    }
   }
 }
